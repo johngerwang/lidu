@@ -40,18 +40,18 @@ class CategoryInline(admin.StackedInline):
         return extra
 
 
+admin.site.register(Category)
+
+
 class CourseAdmin(MarkdownxModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': AdminMarkdownxWidget},
     }
     fieldsets = [
-        ('Cousre Name',     {'fields': ['course_name']}),
-        ('Cousre Introduction',     {'fields': ['introduction']}),
-        ('Teacher Name',    {'fields': ['teacher']}),
+        ('Cousre Info',     {'fields': [
+         'course_name', 'introduction', 'teacher', 'course_time']}),
         ('Content',         {'fields': ['content']}),
-        # ('Publish Date',    {'fields': ['pub_date']}),
-        ('Publish?',        {'fields': ['published']})
-        # ('Advertise Image', {'fields': ['ad_image']})
+        ('UP',        {'fields': ['published', 'up']})
     ]
     inlines = [CategoryInline]
 

@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//course/migrations/0001_initial.py=utf-8
+encoding//course/migrations/0002_auto_20170730_0600.py=utf-8
 encoding//course/models.py=utf-8
+encoding//course/views.py=utf-8
